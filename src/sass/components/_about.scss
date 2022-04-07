@@ -1,0 +1,226 @@
+.about-section {
+  background-color: #fff5f6;
+  background-image: url(../images/about/milkdrops-mob.png);
+  background-repeat: no-repeat;
+  background-position: 0 500px;
+  background-size: contain;
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/about/milkdrops-mob-2x.png);
+  }
+
+  @include tab {
+    background-image: none;
+  }
+
+  @include desk {
+    background-image: url(../images/about/milkdrops-desk.png);
+    background-repeat: no-repeat;
+    background-position: 0 255px;
+    background-size: contain;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/about/milkdrops-desk-2x.png);
+    }
+  }
+}
+
+.about-container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include tab {
+    padding-top: 20px;
+    padding-bottom: 80px;
+  }
+
+  @include desk {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.about-section__pre-title {
+  font-family: 'Titan One';
+  font-size: 18px;
+  line-height: 1.17;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffa5ba;
+
+  margin-bottom: 15px;
+
+  @include tab {
+    font-size: 26px;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+
+  @include desk {
+    font-size: 30px;
+    line-height: 1.13;
+    letter-spacing: 0.04em;
+  }
+}
+
+.about-section__title {
+  font-family: 'Titan One';
+  font-size: 34px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #d41443;
+
+  margin-bottom: 32px;
+
+  @include tab {
+    font-size: 48px;
+    margin-bottom: 40px;
+  }
+
+  @include desk {
+    font-size: 58px;
+    line-height: 1.38;
+    letter-spacing: 0.06em;
+
+    margin-bottom: 79px;
+  }
+}
+
+.about__wrap {
+  @include tab {
+    @include flex-center;
+  }
+}
+
+.about__content-wrap {
+  max-width: 220px;
+
+  @include tel-max {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include tab {
+    max-width: 334px;
+    margin-left: 32px;
+  }
+
+  @include desk {
+    max-width: 463px;
+    margin-left: 139px;
+  }
+
+  transition: opacity 1200ms cubic-bezier(0.4, 0, 0.2, 1),
+  transform 1200ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(80%, 0);
+  opacity: 0;
+  
+    &.element-show {
+      transform: translate(0);
+      opacity: 1;
+    }
+}
+
+.about__picture {
+  @include desk {
+    transition: opacity 1200ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 1200ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translate(-80%, 0);
+    opacity: 0;
+  }
+
+  &.element-show {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+.about__img {
+  @media screen and (max-width: 479px){
+    margin: 0 auto;
+  }  
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    margin: 0 auto auto 40px;
+  }
+}
+
+.about-section__tagline {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
+
+  letter-spacing: 0.04em;
+  color: #000000;
+
+  margin-bottom: 30px;
+
+  @include desk {
+    font-size: 16px;
+    line-height: 1.76;
+    margin-bottom: 32px;
+  }
+}
+
+.about-section__description {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
+  color: #907e82;
+
+  margin-bottom: 20px;
+
+  @include tab {
+    font-size: 14px;
+    line-height: 1.76;
+    letter-spacing: 0.04em;
+  }
+
+  @include desk {
+    line-height: 1.94;
+    margin-bottom: 40px;
+  }
+}
+
+.about-section__conclusion {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
+  color: #907e82;
+
+  margin-bottom: 20px;
+
+  @include tab {
+    font-size: 14px;
+    line-height: 1.76;
+    letter-spacing: 0.04em;
+
+    margin-bottom: 40px;
+  }
+
+  @include desk {
+    line-height: 1.94;
+  }
+}
+
+.about-btn {
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  padding: 16px 35px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #d41443;
+}
+
+.about-btn__icon {
+  margin-left: 12px;
+  stroke: #d41443;
+}
